@@ -57,7 +57,7 @@ with tabs[0]:
             input_data = scaler.transform([[heart_rate, breathing_rate, temperature, movement,
                                             sound_level, oxygen_saturation, sleep_duration, blood_pressure]])
             prediction = model.predict(input_data)
-            stress_level = '🙂 Low Stress' if prediction[0] == 1 else '😰 High Stress'
+            stress_level = '😰 High Stress' if prediction[0] == 1 else '🙂 Low Stress'
             st.success(f'Predicted Stress Level: **{stress_level}**')
 
 with tabs[1]:
